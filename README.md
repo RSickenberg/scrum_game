@@ -1,4 +1,4 @@
-#A Scrum Game made with ❤.
+# A Scrum Game made with ❤.
 
 by Ivan Ilic, Adrian Valverde, Rémy Tombez, Daniel Meilland and Romain Sickenberg
 
@@ -21,4 +21,4 @@ Please, when you update some code, create your branch with
     
 And do a Pull Request inside the git, after move the ticket from `In Progress` => `To review`
 
-If you are disabled, please, do nothing ❤
+> If you are disabled, please, do nothing ❤
