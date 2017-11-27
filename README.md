@@ -13,7 +13,11 @@ is for all JS code and CSS style
 
 is for picture, textures and more.
 
-Please, when you update some code, create your branch with
+## Branchs
+
+Please, don't push anything inside Master (You can't). Create a branch
+
+When you update some code, create your branch with
     
     git branch <branch>
     -
@@ -21,6 +25,7 @@ Please, when you update some code, create your branch with
     
 And do a Pull Request inside the git, after move the ticket from `In Progress` => `To review`
 
+
 > If you are disabled, please, do nothing ❤
 
-### Access to the project with [this link](https://rsickenberg.github.io/scrum_game/)
+#### Access to the project with [this link](https://rsickenberg.github.io/scrum_game/)
