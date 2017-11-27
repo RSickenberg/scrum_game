@@ -26,6 +26,8 @@ When you update some code, create your branch with
 And do a Pull Request inside the git, after move the ticket from `In Progress` => `To review`
 
 
+#
 > If you are disabled, please, do nothing ❤
 
 #### Access to the project with [this link](https://rsickenberg.github.io/scrum_game/)
+---
