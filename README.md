@@ -1,4 +1,4 @@
-A scrum_game made with ❤.
+#A Scrum Game made with ❤.
 
 by Ivan Ilic, Adrian Valverde, Rémy Tombez, Daniel Meilland and Romain Sickenberg
 
@@ -12,3 +12,13 @@ is for all JS code and CSS style
     assets
 
 is for picture, textures and more.
+
+Please, when you update some code, create your branch with
+    
+    git branch <branch>
+    -
+    git checkout <branch>
+    
+And do a Pull Request inside the git, after move the ticket from `In Progress` => `To review`
+
+If you are disabled, please, do nothing ❤
