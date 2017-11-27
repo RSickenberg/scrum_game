@@ -23,4 +23,4 @@ And do a Pull Request inside the git, after move the ticket from `In Progress` =
 
 > If you are disabled, please, do nothing ❤
 
-## Access to the project with [this link](https://rsickenberg.github.io/scrum_game/)
+### Access to the project with [this link](https://rsickenberg.github.io/scrum_game/)
