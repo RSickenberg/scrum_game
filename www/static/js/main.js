@@ -8,24 +8,29 @@ function showExample() {
     window.open('example/index.html', '_blank');
 }
 
-function push(event) {
-    if (event.keyCode === 38 || event.keyCode === 87) {
-        // FOWARD
+function appuye(event) {
+    if (event.keyCode == 38 || event.keyCode == 87) {
+        // FORWARD
+        console.log(event);
     }
 
-    else if (event.keyCode === 40 || event.keyCode === 83) {
+    if (event.keyCode == 40 || event.keyCode == 83) {
         // DOWN
+        console.log(event);
     }
 
-    else if (event.keyCode === 39 || event.keyCode === 68) {
+    if (event.keyCode == 39 || event.keyCode == 68) {
         // RIGHT
+        console.log(event);
     }
 
-    else if (event.keyCode === 37 || event.keyCode === 65) {
+    if (event.keyCode == 37 || event.keyCode == 65) {
         // LEFT
+        console.log(event);
     }
 
-    else if (event.keyCode === 32) {
+    if (event.keyCode == 32) {
         // UP
+        console.log(event);
     }
 }
