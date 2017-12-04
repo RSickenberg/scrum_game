@@ -41,6 +41,7 @@ table, th, td {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+<<<<<<< HEAD
 #title, #content{
 	font-family: "Lucida Console";
 	margin: auto;
@@ -67,4 +68,20 @@ table, th, td {
 
 #game_link:visited:hover{
 	color: rgb(125,125,255);
+=======
+.separator {
+    margin-top: 80px;
+}
+
+.img3d {
+    box-shadow: -3px 3px 2px 1px rgba(0,0,0,0.70);
+}
+
+.to3d {
+    margin: 10px;
+}
+
+.separator-sm {
+    margin: 20px;
+>>>>>>> 5f5d0e309b3ad88010f5bd38b9cf9adffe7319b1
 }
