@@ -1,3 +1,5 @@
+const DEPLACEMENT_VALUE = "10px";
+
 function devShow() {
     window.open('pages/components.html', '_blank');
 }
