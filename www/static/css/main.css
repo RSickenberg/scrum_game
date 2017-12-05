@@ -55,3 +55,15 @@ table, th, td {
 .separator-sm {
     margin: 20px;
 }
+
+.separator-solid {
+    margin: 10px;
+    display: block;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000000), to(#fff));
+}
+
+#exampleGuy {
+    position: relative;
+}

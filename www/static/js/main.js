@@ -1,6 +1,4 @@
-const DEPLACEMENT_VALUE = "10px";
-
-console.log(DEPLACEMENT_VALUE);
+const DEPLACEMENT_VALUE = 5;
 
 document.onkeydown = appuye;
 
@@ -13,9 +11,15 @@ function showExample() {
 }
 
 function appuye(event) {
+
+    var example = document.getElementById('exampleGuy');
+
     if (event.keyCode === 38 || event.keyCode === 87) {
         // FORWARD
-        console.log(event);
+        var element = document.getElementById('exampleGuy');
+        var top = parseInt(element.style.top);
+        example.style.top = top + DEPLACEMENT_VALUE + 'px';
+        console.log(top);
     }
 
     if (event.keyCode === 40 || event.keyCode === 83) {
@@ -38,3 +42,4 @@ function appuye(event) {
         console.log(event);
     }
 }
+
