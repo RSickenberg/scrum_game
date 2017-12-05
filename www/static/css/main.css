@@ -73,6 +73,12 @@ table, th, td {
     position: absolute;
 }
 
+.items {
+    -webkit-animation: itemRotation 4s linear infinite, floatingItems 1s alternate-reverse infinite;
+    -o-animation: itemRotation 4s linear infinite, floatingItems 1s alternate-reverse infinite;
+    animation: itemsRotation 4s linear infinite, floatingItems 1s alternate-reverse infinite;
+    position: relative;
+}
 
 @keyframes jump {
     0% {
@@ -85,5 +91,69 @@ table, th, td {
 
     100% {
         -webkit-filter: drop-shadow(1px 9px 1px rgba(0,0,0,0.85));
+    }
+}
+
+@keyframes itemsRotation {
+    0% {
+        -webkit-transform: rotateY( 0 );
+        -moz-transform: rotateY( 0 );
+        -ms-transform: rotateY( 0 );
+        -o-transform: rotateY( 0 );
+        transform: rotateY( 0 );
+    }
+
+    100% {
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes floatingItems {
+    0% {
+        top: 0;
+    }
+
+    10% {
+        top: 1px;
+    }
+
+    20% {
+        top: 2px;
+    }
+
+    30% {
+        top: 3px;
+    }
+
+    40% {
+        top: 4px;
+    }
+
+    50% {
+        top: 5px;
+    }
+
+    60% {
+        top: 6px;
+    }
+
+    70% {
+        top: 7px;
+    }
+
+    80% {
+        top: 8px;
+    }
+
+    90% {
+        top: 9px;
+    }
+
+    100% {
+        top: 10px;
     }
 }
