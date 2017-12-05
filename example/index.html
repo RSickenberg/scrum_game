@@ -32,9 +32,10 @@
 		document.onkeypress = appuie;
 		
 		function appuie(event){
-			if (event.keyCode == 32){
+			if (event.keyCode === 32){
 				var x = parseInt(toto.style.left);
 				toto.style.left = (x+20)+"px";
+				console.log('space');
 			}
 		}
 		
