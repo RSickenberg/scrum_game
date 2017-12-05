@@ -74,9 +74,9 @@ table, th, td {
 }
 
 .items {
-    -webkit-animation: itemRotation 5s infinite, floatingItems 1s ease-in-out alternate-reverse infinite;
-    -o-animation: itemRotation 5s linear infinite, floatingItems 1s ease-in-out alternate-reverse infinite;
-    animation: itemsRotation 5s linear infinite, floatingItems 1s ease-in-out alternate-reverse infinite;
+    -webkit-animation: itemRotation 6s infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    -o-animation: itemRotation 6s linear infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    animation: itemsRotation 6s linear infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
     position: relative;
 }
 
@@ -104,11 +104,11 @@ table, th, td {
     }
 
     50% {
-        -webkit-transform: rotateY(360deg);
-        -moz-transform: rotateY(360deg);
-        -ms-transform: rotateY(360deg);
-        -o-transform: rotateY(360deg);
-        transform: rotateY(360deg);
+        -webkit-transform: rotateY( 360deg );
+        -moz-transform: rotateY( 360deg );
+        -ms-transform: rotateY( 360deg );
+        -o-transform: rotateY( 360deg );
+        transform: rotateY( 360deg );
     }
 
     100% {
