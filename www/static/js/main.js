@@ -4,8 +4,6 @@ var loader = {
     images: {}
 };
 
-var Game = {};
-
 loader.loadImage = function (key, src) {
     var img = new Image();
 
@@ -16,13 +14,12 @@ loader.loadImage = function (key, src) {
         }.bind(this);
 
         img.onerror = function () {
-            reject('Erreur sur le chargement de l\'image : ' + src);
-        }.bind(this);
+            reject('Could not load image: ' + src);
+        };
+    }.bind(this));
 
-        img.src = src;
-
-        return d;
-    })
+    img.src = src;
+    return d;
 };
 
 loader.getImage = function (key) {
@@ -74,6 +71,8 @@ function pushKey(event) {
     }
 }
 
+var Game = {};
+
 Game.run = function (context) {
     this.ctx = context;
     this._previousElapsed = 0;
@@ -99,10 +98,6 @@ Game.tick = function (elapsed) {
     this.update(delta);
     this.render();
 }.bind(Game);
-
-Game.init = function () {};
-Game.update = function (delta) {};
-Game.render = function () {};
 
 window.onload = function () {
     var context = document.getElementById('game').getContext('2d');

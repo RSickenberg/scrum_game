@@ -8,11 +8,11 @@ var map = {
         1, 3, 3, 3, 1, 1, 3, 1,
         1, 1, 1, 1, 1, 1, 1, 1,
         1, 1, 1, 1, 1, 2, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 2, 1,
         1, 1, 1, 2, 1, 1, 1, 1,
         1, 1, 1, 1, 2, 1, 1, 1,
         1, 1, 1, 1, 2, 1, 1, 1,
-        1, 1, 1, 0, 0, 1, 1, 1
+        1, 1, 1, 1, 2, 1, 1, 1
     ],
     getTile: function (col, row) {
         return this.tiles[row * map.cols + col];
@@ -21,14 +21,9 @@ var map = {
 
 Game.load = function () {
     return [
-        loader.loadImage('tiles', 'assets/texture/blocks/dirt/cd1.png'),
-        loader.loadImage('tiles', 'assets/texture/blocks/dirt/cd2.png'),
-        loader.loadImage('tiles', 'assets/texture/blocks/dirt/cd3.png'),
-        loader.loadImage('tiles', 'assets/texture/blocks/dirt/d1.png'),
-        loader.loadImage('tiles', 'assets/texture/blocks/dirt/d2.png'),
-        loader.loadImage('tiles', 'assets/texture/blocks/dirt/d3.png'),
+        loader.loadImage('tiles', 'assets/tiles.png'),
         loader.loadImage('character', 'assets/img/mex.png')
-    ]
+    ];
 };
 
 Game._drawLayer = function () {
@@ -37,15 +32,15 @@ Game._drawLayer = function () {
             var tile = map.getTile(c, r);
             if (tile !== 0) {
                 this.ctx.drawImage(
-                    this.tileAtlas,
-                    (tile - 1) * map.mapSize,
-                    0,
-                    map.mapSize,
-                    map.mapSize,
-                    c * map.mapSize,
-                    r * map.mapSize,
-                    map.mapSize,
-                    map.mapSize
+                    this.tileAtlas, // image
+                    (tile - 1) * map.mapSize, // source x
+                    0, // source y
+                    map.mapSize, // source width
+                    map.mapSize, // source height
+                    c * map.mapSize,  // target x
+                    r * map.mapSize, // target y
+                    map.mapSize, // target width
+                    map.mapSize // target height
                 )
             }
         }
@@ -54,7 +49,6 @@ Game._drawLayer = function () {
 
 Game.init = function () {
     this.tileAtlas = loader.getImage('tiles');
-    console.log(this.tileAtlas);
     this.hero = {x: 128, y: 384, image: loader.getImage('character')};
 };
 
@@ -65,4 +59,7 @@ Game.render = function () {
     this.ctx.drawImage(this.hero.image, this.hero.x, this.hero.y);
     // draw map top layer
     this._drawLayer(1);
+};
+
+Game.update = function (delta) {
 };
