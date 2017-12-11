@@ -21,13 +21,13 @@ var map = {
 
 Game.load = function () {
     return [
-        loader.loadImage('tiles', '/assets/texture/dirt/cd1.png'),
-        loader.loadImage('tiles', '/assets/texture/dirt/cd2.png'),
-        loader.loadImage('tiles', '/assets/texture/dirt/cd3.png'),
-        loader.loadImage('tiles', '/assets/texture/dirt/d1.png'),
-        loader.loadImage('tiles', '/assets/texture/dirt/d2.png'),
-        loader.loadImage('tiles', '/assets/texture/dirt/d3.png'),
-        loader.loadImage('character', '/assets/img/mex.png')
+        loader.loadImage('tiles', 'assets/texture/blocks/dirt/cd1.png'),
+        loader.loadImage('tiles', 'assets/texture/blocks/dirt/cd2.png'),
+        loader.loadImage('tiles', 'assets/texture/blocks/dirt/cd3.png'),
+        loader.loadImage('tiles', 'assets/texture/blocks/dirt/d1.png'),
+        loader.loadImage('tiles', 'assets/texture/blocks/dirt/d2.png'),
+        loader.loadImage('tiles', 'assets/texture/blocks/dirt/d3.png'),
+        loader.loadImage('character', 'assets/img/mex.png')
     ]
 };
 
@@ -54,5 +54,15 @@ Game._drawLayer = function () {
 
 Game.init = function () {
     this.tileAtlas = loader.getImage('tiles');
+    console.log(this.tileAtlas);
     this.hero = {x: 128, y: 384, image: loader.getImage('character')};
+};
+
+Game.render = function () {
+    // draw map background layer
+    this._drawLayer(0);
+    // draw game sprites
+    this.ctx.drawImage(this.hero.image, this.hero.x, this.hero.y);
+    // draw map top layer
+    this._drawLayer(1);
 };

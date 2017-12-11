@@ -1,7 +1,7 @@
 const DISPLACEMENT_VALUE = 7;
 
 var loader = {
-    images: []
+    images: {}
 };
 
 var Game = {};
@@ -100,13 +100,13 @@ Game.tick = function (elapsed) {
     this.render();
 }.bind(Game);
 
+Game.init = function () {};
+Game.update = function (delta) {};
+Game.render = function () {};
+
 window.onload = function () {
     var context = document.getElementById('game').getContext('2d');
     Game.run(context);
 };
-
-Game.init = function () {};
-Game.update = function (delta) {};
-Game.render = function () {};
 
 ////////////// PAGE GAME /////////////
