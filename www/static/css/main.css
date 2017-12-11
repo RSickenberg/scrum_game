@@ -15,7 +15,6 @@ body {
     background: url("../../../assets/img/lab_wall.jpg") fixed;
 }
 
-
 .styleguide, .styleguide th, .styleguide td {
     border: 1px solid black;
     margin: 50px;
@@ -45,6 +44,7 @@ body {
 .shadow {
   box-shadow: -6px 6px 10px black;
 }
+
 #game_content {
   height: 680px;
   width: 80%;
@@ -55,6 +55,7 @@ body {
   box-shadow: -6px 6px 10px black;
 
 }
+
 #game_title {
   height: 100px;
   width: 80%;
@@ -74,6 +75,7 @@ body {
 	-webkit-box-shadow: 0 5px 5px black;
 	box-shadow: 0 5px 5px black;
 }
+
 h1 {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-size: 50px;
@@ -82,6 +84,7 @@ h1 {
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
+
 h1.deepshadow {
   color: #e0dfdc;
   background-color: #333;
@@ -103,17 +106,21 @@ h1.deepshadow {
 .separator {
     margin-top: 80px;
 }
+
 #table_button {
     border: 0px;
     margin: 0px auto;
 
 }
+
 #arrow_right {
   margin-left: -30px;
 }
+
 #arrow_left {
   margin-right: -30px;
 }
+
 #arrow_up {
   margin-bottom: -35px;
   -webkit-filter: drop-shadow(20px 20px 20px black);
