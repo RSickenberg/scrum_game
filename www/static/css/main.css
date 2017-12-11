@@ -12,9 +12,13 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 body {
     line-height: 1;
+<<<<<<< HEAD
     background-image:url("../../../assets/img/lab_wall.jpg");
 	background-attachment: fixed;
 	
+=======
+    background-image:url("../../../assets/texture/blocks/dirt/cd1.png");
+>>>>>>> a33b21c36297627c4b6729885b895f028ec6bfe3
 }
 table, th, td {
     border: 1px solid black;
@@ -84,6 +88,42 @@ h1 {
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
+h1.deepshadow {
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .4em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+.shadow {
+  box-shadow: -6px 6px 10px black;
+}
+
+#game_content {
+  height: 650px;
+  width: 70%;
+  background-color:rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  margin-top:3%;
+}
+
+#game_title {
+  height: 100px;
+  width: 70%;
+  margin: 0 auto;
+  background-color:rgba(255, 255, 255, 0.5);
+  background-image: url("");
+}
+
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 50px;
+  padding: 25px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
 h1.deepshadow {
   color: #e0dfdc;
   background-color: #333;
@@ -281,4 +321,118 @@ span.arrow:active {
 .separator-sm {
     margin: 20px;
 }
+<<<<<<< HEAD
 >>>>>>> f99a6a223486f3e360513c0286b9c6f862c08b33
+=======
+
+.separator-solid {
+    margin: 10px;
+    display: block;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000000), to(#fff));
+}
+
+#exampleGuy {
+    position: relative;
+}
+
+.jumping {
+    animation: jump 0.4s ease-out alternate;
+    -webkit-animation: jump 0.4s ease-out alternate;
+    position: absolute;
+}
+
+.items {
+    -webkit-animation: itemRotation 6s infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    -o-animation: itemRotation 6s linear infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    animation: itemsRotation 6s linear infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    position: relative;
+}
+
+@keyframes jump {
+    0% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(255, 255, 255));
+    }
+
+    25% {
+        -webkit-filter: drop-shadow(1px 1px 4px rgba(88, 88, 88, 0.75));
+    }
+
+    100% {
+        -webkit-filter: drop-shadow(1px 9px 1px rgba(0,0,0,0.85));
+    }
+}
+
+@keyframes itemsRotation {
+    0% {
+        -webkit-transform: rotateY( 0 );
+        -moz-transform: rotateY( 0 );
+        -ms-transform: rotateY( 0 );
+        -o-transform: rotateY( 0 );
+        transform: rotateY( 0 );
+    }
+
+    50% {
+        -webkit-transform: rotateY( 360deg );
+        -moz-transform: rotateY( 360deg );
+        -ms-transform: rotateY( 360deg );
+        -o-transform: rotateY( 360deg );
+        transform: rotateY( 360deg );
+    }
+
+    100% {
+        -webkit-transform: rotateY( 0deg );
+        -moz-transform: rotateY( 0deg );
+        -ms-transform: rotateY( 0deg );
+        -o-transform: rotateY( 0deg );
+        transform: rotateY( 0deg );
+    }
+}
+
+@keyframes floatingItems {
+    0% {
+        top: 0;
+    }
+
+    10% {
+        top: 1px;
+    }
+
+    20% {
+        top: 2px;
+    }
+
+    30% {
+        top: 3px;
+    }
+
+    40% {
+        top: 4px;
+    }
+
+    50% {
+        top: 5px;
+    }
+
+    60% {
+        top: 6px;
+    }
+
+    70% {
+        top: 7px;
+    }
+
+    80% {
+        top: 8px;
+    }
+
+    90% {
+        top: 9px;
+    }
+
+    100% {
+        top: 10px;
+    }
+}
+>>>>>>> a33b21c36297627c4b6729885b895f028ec6bfe3
