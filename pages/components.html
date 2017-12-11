@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Dev resources</title>
     <link rel="stylesheet" href="../www/static/css/main.css">
+    <script src="../www/static/js/main.js"></script>
 </head>
-<body class="fluid">
+<body class="fluid" style="background: none">
 <h1>Here is some examples to use :</h1>
 <a class="button" href="../index.html">Return home</a>
 <div>
-    <table>
+    <table class="styleguide">
         <tr>
             <th>Prof example</th>
             <th>Some texture the ground / Walls</th>
@@ -36,15 +37,15 @@
                 <img src="../assets/texture/blocks/wood/planks_spruce.png" height="64" width="64"/>
             </td>
             <td>
-                <img src="../assets/texture/blocks/rails/rail_activator.png" height="64" width="64"/>
+                <img src="../assets/texture/blocks/rails/rail_activator.png" height="64" width="64" class="items"/>
                 <img src="../assets/texture/blocks/rails/rail_detector.png" height="64" width="64"/>
                 <img src="../assets/texture/blocks/rails/rail_golden.png" height="64" width="64"/>
-                <img src="../assets/texture/items/apple.png" height="64" width="64"/>
-                <img src="../assets/texture/items/arrow.png" height="64" width="64"/>
+                <img src="../assets/texture/items/apple.png" height="64" width="64" class="items"/>
+                <img src="../assets/texture/items/arrow.png" height="64" width="64" class="items"/>
                 <img src="../assets/texture/items/bone.png" height="64" width="64"/>
                 <img src="../assets/texture/items/book_normal.png" height="64" width="64"/>
                 <img src="../assets/texture/items/cookie original.png" height="64" width="64"/>
-                <img src="../assets/texture/items/wood_pickaxe.png" height="64" width="64"/>
+                <img src="../assets/texture/items/wood_pickaxe.png" height="64" width="64" class="items"/>
                 <img src="../assets/texture/items/melon.png" height="64" width="64"/>
             </td>
             <td>
@@ -62,7 +63,15 @@
     <h3>Some 2D rendering with 3D effect :</h3>
     <div class="to3d">
         <img src="../assets/texture/blocks/stone/sbc-side-3.png" height="64" width="64" class="separator-sm img3d"/>
-        <img src="../assets/texture/blocks/fabric/crafting_table_front.png" height="64" width="64" class="separator-sm img3d"/></div>
+        <img src="../assets/texture/blocks/fabric/crafting_table_front.png" height="64" width="64" class="separator-sm img3d"/>
+    </div>
+
+
+    <div class="separator-solid"></div>
+
+
+    <img src="../example/perso.png" height="80" width="80" id="exampleGuy" style="top: 0; left: 0; right: 0;"/>
+    <h5>Try to move steve with (W,A,S,D) or arrows</h5>
 </div>
 </body>
 </html>
