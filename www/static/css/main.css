@@ -12,12 +12,11 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 body {
     line-height: 1;
-    background-image: url("../../../assets/img/lab_wall.jpg");
-    background-attachment: fixed;
+    background: url("../../../assets/img/lab_wall.jpg") fixed;
 }
 
 
-table, th, td {
+.styleguide, .styleguide th, .styleguide td {
     border: 1px solid black;
     margin: 50px;
 }
@@ -35,7 +34,7 @@ table, th, td {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px;
+    margin: 20px;
     transition-duration: 0.4s;
 }
 
@@ -94,15 +93,6 @@ h1.deepshadow {
   box-shadow: -6px 6px 10px black;
 }
 
-h1 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-size: 50px;
-  padding: 25px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  text-rendering: optimizeLegibility;
-}
-
 h1.deepshadow {
   color: #e0dfdc;
   background-color: #333;
@@ -113,11 +103,9 @@ h1.deepshadow {
 .separator {
     margin-top: 80px;
 }
-#table_button, th, tr, td {
-  margin: 0px;
-  border: 0px;
-  margin-left: auto;
-  margin-right: auto;
+#table_button {
+    border: 0px;
+    margin: 0px auto;
 
 }
 #arrow_right {
@@ -139,22 +127,22 @@ h1.deepshadow {
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
 
 
-a {
+.nicebutton {
   display: block;
   width: 220px;
   height: 70px;
   z-index: 1;
 }
-a:after {
+.nicebutton:after {
   content: '';
   background: linear-gradient(120deg, #96dbc9, #2e533e, #96dbc9);
   background-size: 400% 400%;
   -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
-  -moz-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
-  -webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
-  animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+  -moz-animation: gradient 3s ease-in-out infinite, border 4s forwards ease-in-out reverse;
+  -webkit-animation: gradient 3s ease-in-out infinite, border 4s forwards ease-in-out reverse;
+  animation: gradient 3s ease-in-out infinite, border 4s forwards ease-in-out reverse;
 }
-a > span {
+.nicebutton > span {
   display: block;
   background: linear-gradient(120deg, #96dbc9, #2e533e, #96dbc9);
   background-size: 400% 400%;
@@ -166,7 +154,7 @@ a > span {
 }
 
 /* helpers */
-.absolute-centering, body:after, a, a:after {
+body:after, .nicebutton, a:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -175,14 +163,14 @@ a > span {
   margin: auto;
 }
 
-.text-formatting, a {
+.text-formatting, a.nicebutton {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   letter-spacing: 2px;
   line-height: 70px;
   font-family: 'Squada One', cursive;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 /* motion */
@@ -329,15 +317,15 @@ span.arrow:active {
 
 @keyframes jump {
     0% {
-        -webkit-filter: drop-shadow(0px 0px 0px rgb(255, 255, 255));
+        -webkit-filter: drop-shadow(0px 9px 3px rgba(0,0,0,0.85));
     }
 
     25% {
-        -webkit-filter: drop-shadow(1px 1px 4px rgba(88, 88, 88, 0.75));
+        -webkit-filter: drop-shadow(1px 1px 4px rgba(56, 56, 56, 0.75));
     }
 
     100% {
-        -webkit-filter: drop-shadow(1px 9px 1px rgba(0,0,0,0.85));
+        -webkit-filter: drop-shadow(1px 0px 1px rgb(255, 255, 255));
     }
 }
 
