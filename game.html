@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="www/static/css/main.css">
     <script src="www/static/js/main.js"></script>
 </head>
+
 <body class="fluid" onmousedown='return false;' onselectstart='return false;'>
 
 <div id="game_title" class="shadow">
@@ -16,7 +17,9 @@
 
 <div id="game_content" class="shadow">
 
-  <a class="nicebutton" href="#"><span>PLAY</span></a>
+<a id="button_level1" class="nicebutton levelbutton" href="#"><span id="span_level1">Niveau 1</span></a>
+  <a id="nicebutton" class="nicebutton" href="#" onclick="move_button()"><span  id="button_play" onclick="changer()">PLAY</span></a>
+
 
   </div>
 

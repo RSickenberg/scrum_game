@@ -139,6 +139,12 @@ h1.deepshadow {
   width: 220px;
   height: 70px;
   z-index: 1;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease; /* Transition de type ease */
+}
+a.levelbutton {
+  margin: auto auto 28% auto;
 }
 .nicebutton:after {
   content: '';
