@@ -400,3 +400,8 @@ span.arrow:active {
         top: 10px;
     }
 }
+
+.center > a.button {
+    display: block;
+    margin: 130px 190px;
+}
