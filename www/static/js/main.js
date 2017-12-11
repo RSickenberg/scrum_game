@@ -1,5 +1,16 @@
 const DISPLACEMENT_VALUE = 7;
 
+var loader = {
+    images: []
+};
+
+loader.loadImage = function (key, src) {
+    var img = new Image();
+
+    var d = new Promise(function (resolve, reject) {
+        
+    })
+}
 document.onkeydown = pushKey;
 
 function pushKey(event) {
