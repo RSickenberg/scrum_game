@@ -4,6 +4,8 @@ var loader = {
     images: []
 };
 
+var Game = {};
+
 loader.loadImage = function (key, src) {
     var img = new Image();
 
@@ -22,6 +24,12 @@ loader.loadImage = function (key, src) {
         return d;
     })
 };
+
+loader.getImage = function (key) {
+    return (key in this.images) ? this.images[key] : null;
+};
+
+
 document.onkeydown = pushKey;
 
 function pushKey(event) {
@@ -65,5 +73,40 @@ function pushKey(event) {
         }, 520)
     }
 }
+
+Game.run = function (context) {
+    this.ctx = context;
+    this._previousElapsed = 0;
+
+    var p = this.load();
+    Promise.all(p).then(function (loaded) {
+        this.init();
+        window.requestAnimationFrame(this.tick);
+    }.bind(this));
+};
+
+Game.tick = function (elapsed) {
+    window.requestAnimationFrame(this.tick);
+
+    // clear previous frame
+    this.ctx.clearRect(0, 0, 512, 512);
+
+    // compute delta time in seconds -- also cap it
+    var delta = (elapsed - this._previousElapsed) / 1000.0;
+    delta = Math.min(delta, 0.25); // maximum delta of 250 ms
+    this._previousElapsed = elapsed;
+
+    this.update(delta);
+    this.render();
+}.bind(Game);
+
+window.onload = function () {
+    var context = document.getElementById('game').getContext('2d');
+    Game.run(context);
+};
+
+Game.init = function () {};
+Game.update = function (delta) {};
+Game.render = function () {};
 
 ////////////// PAGE GAME /////////////
