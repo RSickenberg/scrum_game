@@ -15,7 +15,6 @@ body {
     background: url("../../../assets/img/lab_wall.jpg") fixed;
 }
 
-
 .styleguide, .styleguide th, .styleguide td {
     border: 1px solid black;
     margin: 50px;
@@ -107,17 +106,21 @@ h1.deepshadow {
 .separator {
     margin-top: 80px;
 }
+
 #table_button {
     border: 0px;
     margin: 0px auto;
 
 }
+
 #arrow_right {
   margin-left: -30px;
 }
+
 #arrow_left {
   margin-right: -30px;
 }
+
 #arrow_up {
   margin-bottom: -35px;
   -webkit-filter: drop-shadow(20px 20px 20px black);
