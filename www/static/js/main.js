@@ -8,9 +8,20 @@ loader.loadImage = function (key, src) {
     var img = new Image();
 
     var d = new Promise(function (resolve, reject) {
-        
+        img.onload = function () {
+            this.images[key] = img;
+            resolve(img);
+        }.bind(this);
+
+        img.onerror = function () {
+            reject('Erreur sur le chargement de l\'image : ' + src);
+        }.bind(this);
+
+        img.src = src;
+
+        return d;
     })
-}
+};
 document.onkeydown = pushKey;
 
 function pushKey(event) {
