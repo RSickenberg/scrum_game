@@ -47,8 +47,12 @@ function pushKey(event) {
 ////////////// PAGE GAME /////////////
 function move_button() {
     document.getElementById("nicebutton").style.transform = "translateY(-200px)";
+    document.getElementById("button_level1").style.visibility = "visible";
 }
-function changer() {
-				document.getElementById('button_play').innerHTML = 'Niveaux';
+function changetext() {
+		document.getElementById('button_play').innerHTML = 'Niveaux';
 				return false;
+}
+function hiddenbuttton() {
+    document.getElementById("button_level1").style.visibility = "hidden";
 }
