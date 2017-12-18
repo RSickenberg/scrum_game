@@ -18,6 +18,10 @@ loader.loadImage = function (key, src) {
         };
     }.bind(this));
 
+    d.catch(function(e) {
+       console.log(e);
+    });
+
     img.src = src;
     return d;
 };
@@ -99,9 +103,10 @@ Game.tick = function (elapsed) {
     this.render();
 }.bind(Game);
 
-window.onload = function () {
+function runGame () {
     var context = document.getElementById('game').getContext('2d');
     Game.run(context);
+    document.getElementById('play').remove();
 };
 
 ////////////// PAGE GAME /////////////
