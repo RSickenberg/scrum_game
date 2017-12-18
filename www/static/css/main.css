@@ -15,7 +15,6 @@ body {
     background: url("../../../assets/img/lab_wall.jpg") fixed;
 }
 
-
 .styleguide, .styleguide th, .styleguide td {
     border: 1px solid black;
     margin: 50px;
@@ -72,6 +71,7 @@ body {
 .shadow {
   box-shadow: -6px 6px 10px black;
 }
+
 #game_content {
   height: 680px;
   width: 80%;
@@ -82,6 +82,7 @@ body {
   box-shadow: -6px 6px 10px black;
 
 }
+
 #game_title {
   height: 100px;
   width: 80%;
@@ -101,6 +102,7 @@ body {
 	-webkit-box-shadow: 0 5px 5px black;
 	box-shadow: 0 5px 5px black;
 }
+
 h1 {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-size: 50px;
@@ -109,6 +111,7 @@ h1 {
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
+
 h1.deepshadow {
   color: #e0dfdc;
   background-color: #333;
@@ -125,23 +128,26 @@ h1.deepshadow {
   background-color: #333;
   letter-spacing: .4em;
   text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
->>>>>>> 75930f38876c8789b0a961ddd6d16e99a6a55e56
 }
 
 .separator {
     margin-top: 80px;
 }
+
 #table_button {
     border: 0px;
     margin: 0px auto;
 
 }
+
 #arrow_right {
   margin-left: -30px;
 }
+
 #arrow_left {
   margin-right: -30px;
 }
+
 #arrow_up {
   margin-bottom: -35px;
   -webkit-filter: drop-shadow(20px 20px 20px black);
@@ -427,4 +433,9 @@ span.arrow:active {
     100% {
         top: 10px;
     }
+}
+
+.center > a.button {
+    display: block;
+    margin: 130px 190px;
 }
