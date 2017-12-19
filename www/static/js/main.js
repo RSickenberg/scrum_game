@@ -1,7 +1,8 @@
-const DISPLACEMENT_VALUE = 7;
+const DISPLACEMENT_VALUE = 17;
 
 var loader = {
-    images: {}
+    images: {},
+    music: {}
 };
 
 loader.loadImage = function (key, src) {
@@ -26,8 +27,30 @@ loader.loadImage = function (key, src) {
     return d;
 };
 
+loader.loadMusic = function (key, src) {
+    var music = new Audio();
+
+    var m = new Promise(function (resolve, reject) {
+        music.onload = function () {
+            this.music[key] = music;
+            console.log(this.music + ' has been loaded');
+        }.bind(this);
+
+        music.onerror = function () {
+            reject('Can\' load this music: ' + src);
+        };
+    }.bind(this));
+
+    music.src = src;
+    return m;
+};
+
 loader.getImage = function (key) {
     return (key in this.images) ? this.images[key] : null;
+};
+
+loader.getMusic = function(key) {
+    return (key in this.music) ? this.music[key] : null;
 };
 
 
@@ -39,27 +62,22 @@ function pushKey(event) {
 
     if (event.keyCode === 38 || event.keyCode === 87) {
         // FORWARD
-        var top = parseInt(element.style.top);
-        element.style.top = top - DISPLACEMENT_VALUE + 'px';
+        Game.moveHero(1);
     }
 
     if (event.keyCode === 40 || event.keyCode === 83) {
         // DOWN
-        var down = parseInt(element.style.top);
-        element.style.top = down + DISPLACEMENT_VALUE + 'px';
+        Game.moveHero(2);
     }
 
     if (event.keyCode === 39 || event.keyCode === 68) {
         // RIGHT
-        var right = parseInt(element.style.left);
-        element.style.left = right + DISPLACEMENT_VALUE + 'px';
+        Game.moveHero(3);
     }
 
     if (event.keyCode === 37 || event.keyCode === 65) {
         // LEFT
-        var left = parseInt(element.style.left);
-        element.style.left = left - DISPLACEMENT_VALUE + 'px';
-        console.log(event);
+        Game.moveHero(4);
     }
 
     if (event.keyCode === 32) {
@@ -89,7 +107,7 @@ Game.run = function (context) {
 };
 
 Game.tick = function (elapsed) {
-    window.requestAnimationFrame(this.tick);
+    //window.requestAnimationFrame(this.tick);
 
     // clear previous frame
     this.ctx.clearRect(0, 0, 512, 512);
@@ -107,6 +125,4 @@ function runGame () {
     var context = document.getElementById('game').getContext('2d');
     Game.run(context);
     document.getElementById('play').remove();
-};
-
-////////////// PAGE GAME /////////////
+}
