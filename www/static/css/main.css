@@ -12,10 +12,10 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 body {
     line-height: 1;
-    background-image:url("../../../assets/texture/blocks/dirt/cd1.png");
+    background: url("../../../assets/img/lab_wall.jpg") fixed;
 }
 
-table, th, td {
+.styleguide, .styleguide th, .styleguide td {
     border: 1px solid black;
     margin: 50px;
 }
@@ -33,7 +33,7 @@ table, th, td {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px;
+    margin: 20px;
     transition-duration: 0.4s;
 }
 
@@ -46,20 +46,38 @@ table, th, td {
 }
 
 #game_content {
-  height: 650px;
-  width: 70%;
-  background-color:rgba(255, 255, 255, 0.5);
+  height: 680px;
+  width: 80%;
+  min-width: 700px;
+  background-color:rgba(255, 255, 255, 0.8);
   margin: 0 auto;
-  margin-top:3%;
+  margin-top:1%;
+  box-shadow: -6px 6px 10px black;
+
 }
 
 #game_title {
   height: 100px;
-  width: 70%;
+  width: 80%;
+  min-width: 700px;
   margin: 0 auto;
   background-color:rgba(255, 255, 255, 0.5);
-  background-image: url("");
+  box-shadow: -6px 6px 10px black;
 }
+<<<<<<< HEAD
+=======
+#game_buttons {
+	margin: 0 auto;
+	border-bottom: 170px solid rgba(255, 255, 255, 1);
+	border-left: 130px solid transparent;
+	border-right: 130px solid transparent;
+	height: 0;
+	width: 300px;
+	-moz-box-shadow: 0px 5px 5px black;
+	-webkit-box-shadow: 0 5px 5px black;
+	box-shadow: 0 5px 5px black;
+}
+>>>>>>> master
 
 h1 {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
@@ -70,6 +88,20 @@ h1 {
   text-rendering: optimizeLegibility;
 }
 
+<<<<<<< HEAD
+=======
+h1.deepshadow {
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .4em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+.shadow {
+  box-shadow: -6px 6px 10px black;
+}
+
+>>>>>>> master
 h1.deepshadow {
   color: #e0dfdc;
   background-color: #333;
@@ -81,6 +113,183 @@ h1.deepshadow {
     margin-top: 80px;
 }
 
+#table_button {
+    border: 0px;
+    margin: 0px auto;
+
+}
+
+#arrow_right {
+  margin-left: -30px;
+}
+
+#arrow_left {
+  margin-right: -30px;
+}
+
+#arrow_up {
+  margin-bottom: -35px;
+  -webkit-filter: drop-shadow(20px 20px 20px black);
+    filter: drop-shadow(3px 3px 3px black);
+}
+#arrow_down {
+  margin-top: -35px;
+}
+/************* BUTTON PLAY ***********/
+
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+
+
+.nicebutton {
+  display: block;
+  width: 220px;
+  height: 70px;
+  z-index: 1;
+}
+.nicebutton:after {
+  content: '';
+  background: linear-gradient(120deg, #96dbc9, #2e533e, #96dbc9);
+  background-size: 400% 400%;
+  -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  -moz-animation: gradient 3s ease-in-out infinite, border 4s forwards ease-in-out reverse;
+  -webkit-animation: gradient 3s ease-in-out infinite, border 4s forwards ease-in-out reverse;
+  animation: gradient 3s ease-in-out infinite, border 4s forwards ease-in-out reverse;
+}
+.nicebutton > span {
+  display: block;
+  background: linear-gradient(120deg, #96dbc9, #2e533e, #96dbc9);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: gradient 3s ease-in-out infinite;
+  -webkit-animation: gradient 3s ease-in-out infinite;
+  animation: gradient 3s ease-in-out infinite;
+}
+
+/* helpers */
+body:after, .nicebutton, a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.text-formatting, a.nicebutton {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 70px;
+  font-family: 'Squada One', cursive;
+  font-size: 20px;
+}
+
+/* motion */
+@-moz-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@-moz-keyframes border {
+  0% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+  }
+}
+@-webkit-keyframes border {
+  0% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+  }
+}
+@keyframes border {
+  0% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+  }
+}
+
+/*********** ARROWS **************/
+
+span.arrow {
+  display: inline-block;
+  transform: scaleX(2.5);
+  color: rgba(100,100,100,0.7);
+  text-shadow:
+    0 2px 2px rgba(100,100,100,0.7),
+    0 10px 4px rgba(0,0,0,0.8);
+  font-size: 45px;
+}
+
+span.arrow:active {
+  transition: all 0.1s ease;
+  transform: scaleX(2.5) translateY(4px);
+  text-shadow:
+    0 1px 1px rgba(0,0,0,0.5);
+}
 .img3d {
     box-shadow: -3px 3px 2px 1px rgba(0,0,0,0.70);
 }
@@ -93,6 +302,7 @@ h1.deepshadow {
     margin: 20px;
 }
 
+
 .separator-solid {
     margin: 10px;
     display: block;
@@ -104,3 +314,110 @@ h1.deepshadow {
 #exampleGuy {
     position: relative;
 }
+<<<<<<< HEAD
+=======
+
+.jumping {
+    animation: jump 0.4s ease-out alternate;
+    -webkit-animation: jump 0.4s ease-out alternate;
+    position: absolute;
+}
+
+.items {
+    -webkit-animation: itemRotation 6s infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    -o-animation: itemRotation 6s linear infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    animation: itemsRotation 6s linear infinite, floatingItems 1.5s ease-in-out alternate-reverse infinite;
+    position: relative;
+}
+
+@keyframes jump {
+    0% {
+        -webkit-filter: drop-shadow(0px 9px 3px rgba(0,0,0,0.85));
+    }
+
+    25% {
+        -webkit-filter: drop-shadow(1px 1px 4px rgba(56, 56, 56, 0.75));
+    }
+
+    100% {
+        -webkit-filter: drop-shadow(1px 0px 1px rgb(255, 255, 255));
+    }
+}
+
+@keyframes itemsRotation {
+    0% {
+        -webkit-transform: rotateY( 0 );
+        -moz-transform: rotateY( 0 );
+        -ms-transform: rotateY( 0 );
+        -o-transform: rotateY( 0 );
+        transform: rotateY( 0 );
+    }
+
+    50% {
+        -webkit-transform: rotateY( 360deg );
+        -moz-transform: rotateY( 360deg );
+        -ms-transform: rotateY( 360deg );
+        -o-transform: rotateY( 360deg );
+        transform: rotateY( 360deg );
+    }
+
+    100% {
+        -webkit-transform: rotateY( 0deg );
+        -moz-transform: rotateY( 0deg );
+        -ms-transform: rotateY( 0deg );
+        -o-transform: rotateY( 0deg );
+        transform: rotateY( 0deg );
+    }
+}
+
+@keyframes floatingItems {
+    0% {
+        top: 0;
+    }
+
+    10% {
+        top: 1px;
+    }
+
+    20% {
+        top: 2px;
+    }
+
+    30% {
+        top: 3px;
+    }
+
+    40% {
+        top: 4px;
+    }
+
+    50% {
+        top: 5px;
+    }
+
+    60% {
+        top: 6px;
+    }
+
+    70% {
+        top: 7px;
+    }
+
+    80% {
+        top: 8px;
+    }
+
+    90% {
+        top: 9px;
+    }
+
+    100% {
+        top: 10px;
+    }
+}
+
+.center > a.button {
+    display: block;
+    margin: 130px 190px;
+}
+>>>>>>> master
