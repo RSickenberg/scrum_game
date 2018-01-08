@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="www/static/css/main.css">
     <script src="www/static/js/main.js"></script>
 </head>
-<body class="fluid" onmousedown='return false;' onselectstart='return false;'>
+
+<body onload="hiddenbuttton()" class="fluid" onmousedown='return false;' onselectstart='return false;'>
 
 <div id="game_title" class="shadow">
     <h1 class='deepshadow'>Le labyrinthe</h1>
@@ -16,7 +17,11 @@
 
 <div id="game_content" class="shadow">
 
-  <a class="nicebutton" href="#"><span>PLAY</span></a>
+<a id="button_level1" class="nicebutton levelbutton one" href="#"><span id="span_level1">1</span></a>
+<a id="button_level2" class="nicebutton levelbutton" href="#"><span id="span_level1">2</span></a>
+<a id="button_level3" class="nicebutton levelbutton" href="#"><span id="span_level1">3</span></a>
+<a id="nicebutton" class="nicebutton playbutton" href="#" onclick="move_button()"><span  id="button_play" onclick="changetext()">PLAY</span></a>
+
 
   </div>
 
