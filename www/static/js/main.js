@@ -46,7 +46,7 @@ function pushKey(event) {
 
 ////////////// PAGE GAME /////////////
 function move_button() {
-    document.getElementById("nicebutton").style.transform = "translateY(-300px)";
+    document.getElementById("nicebutton").style.transform = "translateY(-200px)";
 	document.getElementById("button_level1").style.transform = "translateY(-150px)";
 	document.getElementById("button_level2").style.transform = "translateY(-150px)";
 	document.getElementById("button_level3").style.transform = "translateY(-150px)";
@@ -57,7 +57,7 @@ function move_button() {
     element.classList.add("two");
 	var element = document.getElementById("button_level3");
     element.classList.add("three");
-	
+
 }
 function changetext() {
 		document.getElementById('button_play').innerHTML = 'Niveaux';
