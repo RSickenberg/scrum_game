@@ -35,16 +35,20 @@ var map = {
 };
 
 Game.load = function () {
-    return [
+
+    var image = [
         loader.loadImage('character', 'assets/img/mex.png'),
-        loader.loadImage('tiles', 'assets/tiles2.png'),
-        setTimeout(function () {
-            loader.loadMusic('1', 'assets/music/1.mp3');
-            loader.loadMusic('2', 'assets/music/2.mp3');
-            loader.loadMusic('3', 'assets/music/3.mp3');
-            loader.loadMusic('4', 'assets/music/4.mp3');
-        }, 1000)
+        loader.loadImage('tiles', 'assets/tiles2.png')
     ];
+
+    var music = [
+        loader.loadMusic('1', 'assets/music/1.mp3'),
+        loader.loadMusic('2', 'assets/music/2.mp3'),
+        loader.loadMusic('3', 'assets/music/3.mp3'),
+        loader.loadMusic('4', 'assets/music/4.mp3')
+    ];
+
+    return image;// + music;
 };
 
 Game._drawLayer = function () {
@@ -71,11 +75,11 @@ Game._drawLayer = function () {
 Game.init = function () {
     this.tileMinecraft = loader.getImage('tiles');
     this.hero = {x: 128, y: 384, image: loader.getImage('character')};
-    this.audio = loader.getMusic("1");
+    //this.audio = loader.getMusic("1");
 
     setTimeout(function () {
-        console.log(this.music);
-    }, 2000)
+        console.log(loader.getMusic('2'));
+    }, 3000)
 };
 
 Game.render = function () {

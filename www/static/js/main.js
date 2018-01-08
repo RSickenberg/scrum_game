@@ -11,7 +11,7 @@ loader.loadImage = function (key, src) {
     var d = new Promise(function (resolve, reject) {
         img.onload = function () {
             this.images[key] = img;
-            console.log(this.images + ' has been loaded');
+            console.log(img.src + ' has been loaded');
             resolve(img);
         }.bind(this);
 
@@ -34,7 +34,8 @@ loader.loadMusic = function (key, src) {
     var m = new Promise(function (resolve, reject) {
         music.onload = function () {
             this.music[key] = music;
-            console.log(this.music + ' has been loaded');
+            console.log(music.src + ' has been loaded');
+            resolve(music);
         }.bind(this);
 
         music.onerror = function () {
