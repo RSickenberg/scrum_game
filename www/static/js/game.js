@@ -19,7 +19,7 @@ var map = {
         34, 33, 33, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 10, 10, 10, 10, 10, 10, 10, 10, 6, 2, 2, 2, 2,
         34, 2, 33, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 10, 10, 10, 10, 10, 10, 10, 6, 6, 2, 2, 2, 2,
         35, 2, 33, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 6, 10, 6, 6, 6, 6, 2, 2, 2, 2,
-        35, 2, 33, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 10, 10, 6, 6, 6, 6, 2, 2, 2, 2,
+        35, 2, 33, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 2, 2, 2, 2, 2, 1, 6, 6, 6, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 10, 10, 6, 6, 6, 6, 2, 2, 2, 2,
         35, 2, 33, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 10, 10, 10, 10, 6, 6, 6, 6, 2, 2, 2, 2, 2,
         34, 2, 33, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 6, 6, 6, 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 2, 2, 2, 2, 2,
         34, 2, 33, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
@@ -38,11 +38,12 @@ Game.load = function () {
     return [
         loader.loadImage('character', 'assets/img/mex.png'),
         loader.loadImage('tiles', 'assets/tiles2.png'),
-        loader.loadMusic('1', 'assets/music/1.mp3')
-        //loader.loadMusic('2', 'assets/music/2.mp3'),
-        //loader.loadMusic('3', 'assets/music/3.mp3'),
-        //loader.loadMusic('4', 'assets/music/4.mp3'),
-        //loader.loadMusic('5', 'assets/music/5.mp3')
+        setTimeout(function () {
+            loader.loadMusic('1', 'assets/music/1.mp3');
+            loader.loadMusic('2', 'assets/music/2.mp3');
+            loader.loadMusic('3', 'assets/music/3.mp3');
+            loader.loadMusic('4', 'assets/music/4.mp3');
+        }, 1000)
     ];
 };
 
@@ -70,8 +71,11 @@ Game._drawLayer = function () {
 Game.init = function () {
     this.tileMinecraft = loader.getImage('tiles');
     this.hero = {x: 128, y: 384, image: loader.getImage('character')};
-    this.music = loader.getMusic("1");
-    //this.music.play();
+    this.audio = loader.getMusic("1");
+
+    setTimeout(function () {
+        console.log(this.music);
+    }, 2000)
 };
 
 Game.render = function () {
@@ -88,7 +92,6 @@ Game.update = function (delta) {
 Game.moveHero = function(command) {
     switch (command) {
         case 1:
-            console.log("hello");
             this.hero.y -= DISPLACEMENT_VALUE;
             Game.render();
             break;
@@ -105,5 +108,4 @@ Game.moveHero = function(command) {
             Game.render();
             break;
     }
-
 };

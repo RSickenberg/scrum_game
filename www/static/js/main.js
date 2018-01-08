@@ -11,6 +11,7 @@ loader.loadImage = function (key, src) {
     var d = new Promise(function (resolve, reject) {
         img.onload = function () {
             this.images[key] = img;
+            console.log(this.images + ' has been loaded');
             resolve(img);
         }.bind(this);
 
@@ -40,6 +41,10 @@ loader.loadMusic = function (key, src) {
             reject('Can\' load this music: ' + src);
         };
     }.bind(this));
+
+    m.catch(function (e) {
+       console.log('oh ohh, seems something bad happened' + e);
+    });
 
     music.src = src;
     return m;
