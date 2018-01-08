@@ -130,7 +130,7 @@ Game.tick = function (elapsed) {
 function runGame () {
     var context = document.getElementById('game').getContext('2d');
     Game.run(context);
-    document.getElementById('play').remove();
+    document.getElementById('buttonsLevel').remove();
 }
 
 ////////////// PAGE GAME /////////////
