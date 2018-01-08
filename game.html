@@ -7,46 +7,45 @@
     <meta about="A game made for CFPT">
     <link rel="stylesheet" href="www/static/css/main.css">
     <script src="www/static/js/main.js"></script>
+    <script src="www/static/js/game.js"></script>
 </head>
-
-<body onload="hiddenbuttton()" class="fluid" onmousedown='return false;' onselectstart='return false;'>
+<body class="fluid" onmousedown="return false;">
 
 <div id="game_title" class="shadow">
     <h1 class='deepshadow'>Le labyrinthe</h1>
 </div>
 
+<div id="buttonsLevel">
+    <a id="button_level1" class="nicebutton levelbutton one" onclick="runGame()" href="#"><span id="span_level1">1</span></a>
+    <a id="button_level2" class="nicebutton levelbutton" href="#"><span id="span_level2">2</span></a>
+    <a id="button_level3" class="nicebutton levelbutton" href="#"><span id="span_level3">3</span></a>
+    <a id="nicebutton" class="nicebutton playbutton" href="#" onclick="move_button()"><span  id="button_play" onclick="changetext()">PLAY</span></a>
+</div>
+
 <div id="game_content" class="shadow">
+    <canvas id="game" width="1312px" height="680px"></canvas>
+</div>
 
-<a id="button_level1" class="nicebutton levelbutton one" href="#"><span id="span_level1">1</span></a>
-<a id="button_level2" class="nicebutton levelbutton" href="#"><span id="span_level1">2</span></a>
-<a id="button_level3" class="nicebutton levelbutton" href="#"><span id="span_level1">3</span></a>
-<a id="nicebutton" class="nicebutton playbutton" href="#" onclick="move_button()"><span  id="button_play" onclick="changetext()">PLAY</span></a>
-
-
-  </div>
-
-  <div id="game_buttons">
+<div id="game_buttons" style="display: none">
 
     <table id="table_button" class="notable">
-       <tr>
-           <th></th>
-           <th><span class="arrow">&#x25B2;</span></th>
-           <th></th>
-       </tr>
+        <tr>
+            <th></th>
+            <th><span class="arrow">&#x25B2;</span></th>
+            <th></th>
+        </tr>
 
-       <tr>
-           <td><span class="arrow">&#x25C0;</span></td>
-           <td></td>
-           <td><span class="arrow">&#x25B6;</span></td>
-       </tr>
-       <tr>
-           <td></td>
-           <td><span class="arrow">&#x25BC;</span></td>
-           <td></td>
-       </tr>
-     </table>
-
-  </div>
+        <tr>
+            <td><span class="arrow">&#x25C0;</span></td>
+            <td></td>
+            <td><span class="arrow">&#x25B6;</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span class="arrow">&#x25BC;</span></td>
+            <td></td>
+        </tr>
+    </table>
 
 </div>
 
